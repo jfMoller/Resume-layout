@@ -1,0 +1,260 @@
+* {
+  /*  outline: solid 1px rgba(171, 90, 90, 0.6); */
+  padding: 0;
+  margin: 0;
+}
+
+/* standard A4 dimensions: 21 x 29.7 cm */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  background-color: rgb(27, 32, 33);
+}
+
+main {
+  height: 29.7cm;
+  width: 21cm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.cv-content {
+  width: 66.1458%;
+  height: 65.8228%;
+  display: grid;
+  grid-template-columns: 42.5fr 57.5fr;
+  grid-template-rows: 19.8294fr 38.2353fr 38.2353fr;
+
+  /*   grid-template-rows: 18.5294fr 40.7353fr 40.7353fr; */
+  grid-template-areas:
+    "aside header"
+    "aside section"
+    "aside section";
+}
+
+aside {
+  grid-area: aside;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50fr 25fr 25fr;
+  grid-template-areas:
+    "portrait"
+    "contact"
+    "references";
+  color: #ececec;
+  background-color: #3a42e5;
+}
+
+#portrait-picture {
+  grid-area: portrait;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#portrait-picture img {
+  max-height: 100%;
+  width: 170%;
+  object-fit: cover;
+}
+#contact-info {
+  grid-area: contact;
+  padding-left: 1.9rem;
+  padding-top: 1.9rem;
+}
+
+p {
+  font-size: 0.65rem;
+  line-height: 0.85rem;
+}
+
+.short-info ul {
+  list-style: square;
+}
+
+li {
+  margin-left: 1rem;
+  font-size: 0.65rem;
+  line-height: 0.9rem;
+}
+
+.work-experience li {
+  margin-left: -1.1rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  line-height: 1rem;
+}
+
+#references {
+  grid-area: references;
+  padding-left: 1.9rem;
+}
+
+aside h3 {
+  padding-bottom: 0.5rem;
+}
+
+header {
+  grid-area: header;
+  color: #3a42e5;
+  background-color: #ececec;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+  padding-top: 1.4rem;
+}
+
+#full-name {
+  line-height: 2.1rem;
+}
+
+#profession {
+  text-transform: uppercase;
+  margin-top: 0.8rem;
+  padding-bottom: 0.6rem;
+}
+
+#full-name h1 {
+  font-size: 2.3rem;
+  font-weight: 900;
+}
+
+#profession h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+#border {
+  border-bottom: solid 0.22rem #3a42e5;
+}
+
+section {
+  grid-area: section;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 29.2373fr 35.3814fr 35.3814fr;
+  grid-template-areas:
+    "about"
+    "work"
+    "education";
+  color: #3a42e5;
+  background-color: #ececec;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+  padding-bottom: 1.4rem;
+  padding-bottom: 1.4rem;
+}
+
+section h3 {
+  padding: 0.85rem;
+  padding-left: 0;
+}
+
+section h4 {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  padding-bottom: 0.15rem;
+}
+
+.short-info {
+  grid-area: about;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "about-me competencies";
+}
+
+#about-me {
+  grid-area: about;
+  grid-area: about-me;
+}
+
+#about-me p {
+  padding-right: 0.1rem;
+}
+
+#competencies {
+  grid-area: about;
+  grid-area: competencies;
+}
+
+#competencies ul {
+  padding-top: 0rem;
+}
+
+.work-experience {
+  grid-area: work;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr 1fr 1fr;
+  grid-template-areas:
+    "title title"
+    "position-1 summary-1"
+    "position-2 summary-2";
+}
+
+.work-experience h3 {
+  grid-area: title;
+}
+#position-1 {
+  grid-area: work;
+  grid-area: position-1;
+}
+#summary-1 {
+  grid-area: work;
+  grid-area: summary-1;
+}
+
+#position-2 {
+  grid-area: work;
+  grid-area: position-2;
+}
+
+#summary-2 {
+  grid-area: work;
+  grid-area: summary-2;
+}
+
+.education {
+  grid-area: education;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr 1fr 1fr;
+  grid-template-areas:
+    "title title"
+    "education-1 summary-3"
+    "education-2 summary-4";
+}
+
+.education h3 {
+  grid-area: title;
+}
+#education-1 {
+  grid-area: education;
+  grid-area: education-1;
+}
+
+#summary-3 {
+  grid-area: summary-3;
+  margin-left: -1.8rem;
+}
+#education-2 {
+  grid-area: education;
+  grid-area: education-2;
+}
+#summary-4 {
+  grid-area: summary-4;
+  margin-left: -1.8rem;
+}
