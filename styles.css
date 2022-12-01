@@ -74,8 +74,10 @@ aside .references-container {
   padding-top: 0.2rem;
 }
 
-aside h3 {
+aside h2 {
   padding-bottom: 0.5rem;
+  font-size: 1.1rem;
+  line-height: 1rem;
 }
 
 aside a {
@@ -84,6 +86,7 @@ aside a {
 
 header {
   grid-area: header;
+  line-height: 1rem;
   color: #3a42e5;
   background-color: #ececec;
   padding-left: 1.6rem;
@@ -107,7 +110,7 @@ header #profession {
   padding-bottom: 0.65rem;
 }
 
-header #profession h3 {
+header #profession h2 {
   font-size: 0.9rem;
   font-weight: 600;
 }
@@ -134,6 +137,7 @@ section {
 
 section .short-info-container {
   grid-area: about;
+  line-height: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
@@ -149,6 +153,8 @@ section h3 {
   padding-bottom: 0.55rem;
   padding-top: 0.89rem;
   padding-left: 0;
+  font-size: 1.1rem;
+  line-height: 1rem;
 }
 
 section h4 {
@@ -265,17 +271,7 @@ section #summary-4 {
   margin-left: -1.8rem;
 }
 
-aside,
-section,
 p {
   font-size: 0.65rem;
   line-height: 0.85rem;
-}
-
-aside,
-header,
-section,
-h3 {
-  font-size: 1.1rem;
-  line-height: 1rem;
 }
